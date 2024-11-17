@@ -13,6 +13,7 @@
 
 **1 Enumerators**
 - Interact Actions
+- Interaction mode
 	
 **1 Structure**
 - RIMActions
@@ -181,13 +182,11 @@ Structure for the Actions.
 
 	Menu action Enumerator
 
-- **bMulticast (bool)**: 
+- **Mode (InteractionMode Enum)**: 
 	
-	This will multicast the interaction as long as bClientOnly is false
+	This controlls if the action will be executed on server / client only OR multicast.
 
-- **bClientOnly (bool)**: 
 
-	The interaction will only happen on the client which interacts with something. Interaction will go through server if this is false.
 
 ---
 
