@@ -11,12 +11,14 @@
 - WBP RIM Menu
 - WBP RIM Element
 
-**1 Enumerators**
+**3 Enumerators**
 - Interact Actions
-- Interaction mode
-	
-**1 Structure**
+- Interaction Replication
+- Interaction Conditions
+
+**2 Structure**
 - RIMActions
+- RIMConditions
 
 
 
@@ -27,7 +29,9 @@
 # Features
 
 
-- Scrollable interaction menu
+- Scrollable interaction menu.
+
+- Conditions to show interact actions.
 
 - Character component.
 
@@ -71,8 +75,16 @@
 ### Interaction Actions
 
 Just add interactions to Enum_InteractActions found at Enumerators/Enum_InteractActions and you will have more actions you can use.
- 
+# 
+### Interaction Conditions
 
+This will see if player had the same or all conditions as the interactables have.
+
+Add conditions in interactable and choose if all conditions are required or just one.
+
+Add conditions to player in Interaction Manager to work with the interactable conditions.
+
+you can add more conditions in Enumerators/Enum_InteractionConditions
 
 ---
 
@@ -182,11 +194,29 @@ Structure for the Actions.
 
 	Menu action Enumerator
 
-- **Mode (InteractionMode Enum)**: 
+- **Replication (InteractionReplication Enum)**: 
 	
 	This controlls if the action will be executed on server / client only OR multicast.
 
+- **Conditions (RIMConditions Structure)**: 
+	
+	This is a structure to control which menu options are displayed if player has required conditions.
 
+---
 
+# RIMConditions Structure
+	
+Structure for the conditions.
+
+#
+**Variables:**
+
+- **bRequireAllConditions (bool)**: 
+
+	Enable this to check if player has all the same conditions as interactable. ( disabled just needs 1 equal )
+
+- **Conditions (Array of Interaction Conditions Enum)**: 
+	
+	Add as many conditions here as you want to be compared to player's conditions.
 ---
 
