@@ -6,6 +6,10 @@
 - Actor component 
 - Character component
 
+**1 Interface**
+
+- RIMInteraction Interface
+
 **2 Widgets**
 
 - WBP RIM Menu
@@ -85,6 +89,18 @@ Add conditions in interactable and choose if all conditions are required or just
 Add conditions to player in Interaction Manager to work with the interactable conditions.
 
 you can add more conditions in Enumerators/Enum_InteractionConditions
+
+If you want more complex conditions you can utilize BP_RIMInteractionInterface added to the interactable actor, and make sure you have enabled bUseInterfaceCondition.
+
+When this is done you'll be able to implement the interface function found under interfaces in the blueprint followed by a with a "Switch on Enum_InteractActions" which will let you do custom logic for every action to display menus.
+
+#
+
+### Conditions and dynamic labels
+
+You need to add the interface to the interactable actor to use these features.
+
+See BP_Switch for condition example with interface, or BP_Lightswitch for dynamic label example with interface.
 
 ---
 
@@ -194,9 +210,25 @@ Structure for the Actions.
 
 	Menu action Enumerator
 
+- **bUseDynamicLabel (bool)**: 
+	
+	Allows you to get label from code assuming you have added RIMInteraction Interface to the interactable actor.
+
+- **Label(Text)**: 
+
+	Static label used when "bUseDynamicLabel" is disabled. Used to change display text in menu element.
+
 - **Replication (InteractionReplication Enum)**: 
 	
 	This controlls if the action will be executed on server / client only OR multicast.
+
+- **bUseInterfaceCondition (bool)**: 
+	
+	Allows you to code complex conditions as long as you have added RIMInteraction Interface to the interactable actor.
+	
+	This disables Conditions variable from below.
+
+
 
 - **Conditions (RIMConditions Structure)**: 
 	
@@ -218,5 +250,10 @@ Structure for the conditions.
 - **Conditions (Array of Interaction Conditions Enum)**: 
 	
 	Add as many conditions here as you want to be compared to player's conditions.
+
+
+# RIMInteraction Interface
+- Function CanAddMenuElement implement this function for complex conditions
+- Function GetDynamicLabel implement this function for custom labels e.g. item names
 ---
 

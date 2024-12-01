@@ -1,6 +1,6 @@
 # ReplicatedInteractionMenu Changelog
 
-### v1.15 - *30. Nov 2024*
+### v1.15 - *30. Nov 2024*  | **PENDING ON FAB**
 
 #### Animations:
 * Added Fade in / fade out animation to interaction menu.
@@ -19,5 +19,8 @@
 - Added conditions array to InteractionManager component for comparison.
 - Added condition structure.
 - Added condition enumerator.
+- Added a variable ( bUseInterfaceCondition ) used for more complex conditions for displaying menu elements.
 
+#### Additional:
+- Added RIMInteractionInterface for dynamic labels and custom conditions.
 ---
