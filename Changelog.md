@@ -1,6 +1,6 @@
 # ReplicatedInteractionMenu Changelog
 
-### v1.15 - *30. Nov 2024*  | **PENDING ON FAB**
+### v1.15 - *30. Nov 2024*
 
 #### Animations:
 * Added Fade in / fade out animation to interaction menu.
