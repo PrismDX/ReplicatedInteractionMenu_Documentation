@@ -234,6 +234,17 @@ Structure for the Actions.
 	
 	This is a structure to control which menu options are displayed if player has required conditions.
 
+
+- **bHoldToInteract (bool)**: 
+	
+	This enables hold to interact.
+
+- **HoldThreshold (float)**: 
+
+	This changes how many seconds you'll have to hold the button in order to interact.
+
+
+
 ---
 
 # RIMConditions Structure

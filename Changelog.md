@@ -1,5 +1,8 @@
 # ReplicatedInteractionMenu Changelog
 
+### v1.2 - *01. Sept 2025*
+* Added Hold to interact.
+
 ### v1.15 - *30. Nov 2024*
 
 #### Animations:
